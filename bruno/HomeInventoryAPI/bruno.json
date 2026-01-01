@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "HomeInventoryAPI",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

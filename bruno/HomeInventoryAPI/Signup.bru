@@ -1,0 +1,23 @@
+meta {
+  name: Signup
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{API_ENDPOINT}}/api/auth/signup
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "juncapersonal@gmail.com",
+    "password": "junzheng"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

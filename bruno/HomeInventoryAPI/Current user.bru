@@ -1,0 +1,19 @@
+meta {
+  name: Current user
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{API_ENDPOINT}}/api/auth/me
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{AUTH_TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

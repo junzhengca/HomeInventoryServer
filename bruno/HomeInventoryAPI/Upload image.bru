@@ -1,0 +1,26 @@
+meta {
+  name: Upload image
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{API_ENDPOINT}}/api/images/upload
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{AUTH_TOKEN}}
+}
+
+body:json {
+  {
+    "image": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTU0MzMxZDdhYjJiODMzOGFlOGNhNDgiLCJlbWFpbCI6Imp1bmNhcGVyc29uYWxAZ21haWwuY29tIiwiaWF0IjoxNzY3MTI1Nzk3fQ.ZqaaBR76aoURyRZPlfMAxiPtwhdqVqdVCXSnT41nnG4"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

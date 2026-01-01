@@ -1,0 +1,26 @@
+meta {
+  name: Update avatar URL
+  type: http
+  seq: 9
+}
+
+patch {
+  url: {{API_ENDPOINT}}/api/auth/me
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{AUTH_TOKEN}}
+}
+
+body:json {
+  {
+    "avatarUrl": "https://google.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
