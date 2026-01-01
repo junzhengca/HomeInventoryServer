@@ -4,6 +4,12 @@ FROM node:20-slim
 # Set working directory
 WORKDIR /app
 
+# Install curl and wget
+RUN apt-get update && \
+    apt-get install -y curl wget && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # Copy package files
 COPY package*.json ./
 
